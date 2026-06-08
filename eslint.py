@@ -67,7 +67,7 @@ def main():
     agg = aggregate(df)
     max_n = filter_max_n(agg)
     rules = compute_rules(max_n)
-    df.to_csv(OUTPUT_FILE, index=False)
+    rules.to_csv(OUTPUT_FILE, index=False)
 
 
 if __name__ == "__main__":
