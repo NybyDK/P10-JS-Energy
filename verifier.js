@@ -18,7 +18,7 @@ function run(file) {
     __RESULT__;
     `;
 
-    return new vm.Script(wrapper, { filename: file }).runInContext(vm.createContext({}));
+    return new vm.Script(wrapper).runInContext(vm.createContext({}));
 }
 
 for (const entry of fs.readdirSync(ROOT, { withFileTypes: true })) {
